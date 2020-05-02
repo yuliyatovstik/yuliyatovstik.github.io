@@ -1,1 +1,15 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway/Raleway-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+.list-nav__item {
+    display: inline;
+    margin: 5px 35px;
+}
