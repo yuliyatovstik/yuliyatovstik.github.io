@@ -26,7 +26,7 @@ header nav ul li a {
     color: purple;
 }
 body header nav ul.list li.list-item a {
-    color: goldenrod;
+    color: blue;
 }
 body .list-item a {
     color: gainsboro;
@@ -156,3 +156,22 @@ section #contacts-form-submit {
     color: pink;
 }
 /* ----------------------------------- */
+
+* {
+    background-color: antiquewhite;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.list-item a {
+    color: blue;
+}
+
+nav a:hover {
+    color: blueviolet;
+}
+
+nav a:visited {
+    color:  blueviolet;
+}
+
