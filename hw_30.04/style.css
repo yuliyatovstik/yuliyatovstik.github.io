@@ -7,24 +7,39 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(190, 190, 190);
+    background-color: rgba(158, 250, 133, 0.5);
     max-width: 1920px;
-    min-width: 640px;
+    min-width: 400px;
     width: 80vw;
     margin: auto;
+    font-size: 18px;
 }
 
 header, nav, ul {
     margin-top: 0;
 }
 
-.header {
-    background: grey;
-    font-size: 20px;
-    text-align: right;
+.header, .footer {
+    background: rgb(253, 178, 135);
     height: 60px;
     border-radius: 15px;
     border: 3px solid white;
+}
+
+.header {
+    font-size: 1.3rem;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.header a {
+    text-decoration: none;
+    font-style: italic;
+    color: blue;
+}
+
+a:hover {
+    color: red;
 }
 
 .list-nav__item {
@@ -36,7 +51,7 @@ header, nav, ul {
     text-align: center;
 }
 
-.blog, .test-nth {
+.blog, .test-nth, .contacts {
     background: rgb(242, 249, 252);
     text-align: justify;
     margin: auto;
@@ -50,22 +65,37 @@ header, nav, ul {
     padding: 0px 15px 15px;
 }
 
-article:nth-child(2) {
-    color: cadetblue;
-    font-weight: 600;
-}
-
 .test-list__item:nth-child(2n) {
     color: cadetblue;
     font-weight: 600;
 }
 
+.test-list__item:nth-child(2n+1) {
+    border: 2px dotted black;
+}
+
 .test-list__item {
     display: inline-block;
     padding-top: 10px;
-    margin: 0px 25px;
+    margin: 20px 25px 10px;
 }
 
 .test-nth {
     text-align: center;
+}
+
+.contacts {
+    width: 30vw;
+    min-width: 400px;
+    text-align: center;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.footer {
+    text-align: left;
+    font-size: 0.8em;
+    margin: 15px 0px;
+    padding: 15px;
+    box-sizing: border-box;
 }
