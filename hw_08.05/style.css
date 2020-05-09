@@ -1,1 +1,74 @@
+@font-face {
+    font-family: "Arial";
+    src: url("fonts/ArialRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 
+@font-face {
+    font-family: "ArialBold";
+    src: url("fonts/ArialBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+.first-screen {
+    font-size: 40px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/5a3258145b01f.png);;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+}
+
+.logo {
+    margin: 2% 5%;
+}
+
+.logo-img, .logo-text {
+    max-width: 200px;
+    max-height: 160px;
+    float: left;
+}
+
+.logo-text {
+    margin-left: 1%;
+}
+
+.contacts {
+    max-width: 350px;
+    max-height: 160px;
+    float: right;
+    margin-right: 5%;
+}
+
+.container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.block-subheader {
+    color: white;
+    font-size: 20vh;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);;
+    width: 50%;
+    height: 50%;
+    border: 10px solid white;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
