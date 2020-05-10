@@ -19,26 +19,27 @@
 }
 
 body {
-
+    background: lightsteelblue;
 }
 
 .first-screen {
-    font-size: 40px;
     width: 100vw;
     height: 100vh;
+    float: left;
     background-image: url(./images/5a3258145b01f.png);;
     background-repeat: no-repeat;
     background-size: cover;
-    float: left;
+    font-size: 35px;
 }
 
 .logo {
     margin: 2% 5%;
 }
 
-.logo-img, .logo-text {
+.logo-img,
+.logo-text {
     max-width: 200px;
-    max-height: 160px;
+    max-height: 150px;
     float: left;
 }
 
@@ -48,7 +49,7 @@ body {
 
 .contacts {
     max-width: 350px;
-    max-height: 160px;
+    max-height: 140px;
     float: right;
     margin-right: 5%;
 }
@@ -60,15 +61,111 @@ body {
 }
 
 .block-subheader {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border: 10px solid white;
+    -webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 2px 1px rgba(0,0,0,0.3);
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.3);
     color: white;
     font-size: 20vh;
     text-align: center;
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
-    box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);;
-    width: 50%;
-    height: 50%;
-    border: 10px solid white;
-    position: absolute;
-    top: 35%;
-    left: 25%;
 }
+
+.blocks-content {
+    float: left;
+    width: 100vw;
+    padding: 2.5vw;
+    background: rgba(26, 35, 63, 0.98);
+}
+
+.blocks-content a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.content {
+    float: left;
+    width: 25vw;
+    height: 60vh;
+    margin: 0 calc(20vw/6);
+    padding: 2%;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background: rgb(26, 35, 63);
+    text-align: center;
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.blocks-content i {
+    padding: 4% 0;
+    font-size: 100px;
+}
+
+.blocks-content h2 {
+    padding: 3% 0;
+    color: teal;
+}
+
+.content p {
+    padding: 4%;
+    line-height: 35px;
+    text-align: justify;
+}
+
+.blocks-content a:nth-child(1) .content {
+    -webkit-transition: transform 1s steps(2, end);
+    -moz-transition: transform 1s steps(2, end);
+    -ms-transition: transform 1s steps(2, end);
+    transition: transform 1s steps(2, end);
+}
+
+.blocks-content a:nth-child(1) .content:hover {
+    -webkit-transform: skewY(3deg);
+    -moz-transform: skewY(3deg);
+    -ms-transform: skewY(3deg);
+    transform: skewY(3deg);
+}
+
+.blocks-content a:nth-child(2) .content {
+    -webkit-transition: transform 1s steps(4, end);
+    -moz-transition: transform 1s steps(4, end);
+    -ms-transition: transform 1s steps(4, end);
+    transition: transform 1s steps(4, end);
+}
+
+.blocks-content a:nth-child(2) .content:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+
+.blocks-content a:nth-child(3) .content {
+    -webkit-transition: transform 1s steps(8, end);
+    -moz-transition: transform 1s steps(8, end);
+    -ms-transition: transform 1s steps(8, end);
+    transition: transform 1s steps(8, end);
+}
+
+.blocks-content a:nth-child(3) .content:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+
+/* 
+-webkit-
+-moz-
+-ms-
+-khtml-
+-o-
+*/
