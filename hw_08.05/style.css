@@ -54,6 +54,31 @@ body {
     }
 }
 
+@-webkit-keyframes clock {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes clock {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+@keyframes clock {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .first-screen {
     width: 100vw;
     height: 100vh;
@@ -210,18 +235,12 @@ body {
     -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
     box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
     background:rgb(26, 35, 63);
-    -webkit-animation: magic-cube 2s linear 0s 4 normal;
-    -moz-animation: magic-cube 2s linear 0s 4 normal;
-    -ms-animation: magic-cube 2s linear 0s 4 normal;
-    -khtml-animation: magic-cube 2s linear 0s 4 normal;
-    -o-animation: magic-cube 2s linear 0s 4 normal;
-    animation: magic-cube 2s linear 0s 4 normal;
-    /* animation-name: magic-cube;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: 4;
-    animation-direction: normal; */
+    -webkit-animation: magic-cube 2s linear 0s 5 normal;
+    -moz-animation: magic-cube 2s linear 0s 5 normal;
+    -ms-animation: magic-cube 2s linear 0s 5 normal;
+    -khtml-animation: magic-cube 2s linear 0s 5 normal;
+    -o-animation: magic-cube 2s linear 0s 5 normal;
+    animation: magic-cube 2s linear 0s 5 normal;
 }
 
 .anima-block .anima-square:nth-child(2) {
@@ -234,12 +253,12 @@ body {
 }
 
 .anima-block .anima-square:nth-child(3) {
-    -webkit-animation: magic-cube 2s linear 1s 4 normal;
-    -moz-animation: magic-cube 2s linear 1s 4 normal;
-    -ms-animation: magic-cube 2s linear 1s 4 normal;
-    -khtml-animation: magic-cube 2s linear 1s 4 normal;
-    -o-animation: magic-cube 2s linear 1s 4 normal;
-    animation: magic-cube 2s linear 1s 4 normal;
+    -webkit-animation: magic-cube 2s linear 1s 5 normal;
+    -moz-animation: magic-cube 2s linear 1s 5 normal;
+    -ms-animation: magic-cube 2s linear 1s 5 normal;
+    -khtml-animation: magic-cube 2s linear 1s 5 normal;
+    -o-animation: magic-cube 2s linear 1s 5 normal;
+    animation: magic-cube 2s linear 1s 5 normal;
 }
 
 .anima-block .anima-square:nth-child(4) {
@@ -251,15 +270,98 @@ body {
     animation: magic-cube 2s linear 1.5s 3 normal;
 }
 
+.clock-block {
+    width: 100vw;
+    height: 250px;
+}
 
+.clock {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: calc(50% - 100px);
+    border: 2px solid grey;
+    border-radius: 25%;
+    -webkit-box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+    background: #f2d5fd;
+}
 
+.number-hours {
+    list-style-type: none;
+    font-size: 25px;
+    font-weight: 700;
+}
 
+.number-hours li:nth-child(1) {
+    position: absolute;
+    top: 3px;
+    left: 88px;
+}
 
-/* 
--webkit-
--moz-
--ms-
--khtml-
--o-
-*/
+.number-hours li:nth-child(2) {
+    position: absolute;
+    top: 85px;
+    right: 5px;
+}
+
+.number-hours li:nth-child(3) {
+    position: absolute;
+    bottom: 3px;
+    left: 92px;
+}
+
+.number-hours li:nth-child(4) {
+    position: absolute;
+    top: 85px;
+    left: 5px;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+    -webkit-transform-origin: bottom center; 
+    -ms-transform-origin: bottom center; 
+    transform-origin: bottom center;
+}
+
+.hour-hand {
+    width: 3px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 99px;
+    background-color: black;
+    -webkit-animation: clock 43200s steps(60, end) infinite;
+    -moz-animation: clock 43200s steps(60, end) infinite;
+    -ms-zoom-animation: clock 43200s steps(60, end) infinite;
+    animation: clock 43200s steps(60, end) infinite;
+}
+
+.minute-hand {
+    width: 2px;
+    height: 65px;
+    position: absolute;
+    top: 35px;
+    left: 99px;
+    background-color: grey;
+    -webkit-animation: clock 3600s steps(60, end) infinite;
+    -moz-animation: clock 3600s steps(60, end) infinite;
+    -ms-zoom-animation: clock 3600s steps(60, end) infinite;
+    animation: clock 3600s steps(60, end) infinite;
+}
+
+.second-hand {
+    width: 1px;
+    height: 68px;
+    position: absolute;
+    top: 32px;
+    left: 100px;
+    background-color: orangered;
+    -webkit-animation: clock 60s steps(60, end) infinite;
+    -moz-animation: clock 60s steps(60, end) infinite;
+    -ms-zoom-animation: clock 60s steps(60, end) infinite;
+    animation: clock 60s steps(60, end) infinite;
+}
 
