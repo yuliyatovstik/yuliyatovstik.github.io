@@ -22,6 +22,63 @@ body {
     background: lightsteelblue;
 }
 
+@keyframes magic-cube {
+    0% {
+        margin-left: 50px;
+        border-radius: 10%;
+    }
+    25% {
+        margin-left: 25vw;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+    }
+    50% {
+        margin-left: 45vw;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: radial-gradient( rgb(255, 255, 255), rgb(26, 35, 63));
+    }
+    75% {
+        margin-left: 70vw;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+    }
+    100% {
+        margin-left: 95vw;
+        border-radius: 10%;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@-webkit-keyframes clock {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes clock {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+@keyframes clock {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .first-screen {
     width: 100vw;
     height: 100vh;
@@ -54,7 +111,7 @@ body {
     margin-right: 5%;
 }
 
-.container:after {
+.clearfix:after {
     content: "";
     display: block;
     clear: both;
@@ -161,11 +218,150 @@ body {
     transform: rotate(360deg);
 }
 
+.anima-block {
+    width: 100vw;
+    height: 120px;
+    position: relative;
+}
 
-/* 
--webkit-
--moz-
--ms-
--khtml-
--o-
-*/
+.anima-square {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    margin: 5px;
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    background:rgb(26, 35, 63);
+    -webkit-animation: magic-cube 2s linear 0s 5 normal;
+    -moz-animation: magic-cube 2s linear 0s 5 normal;
+    -ms-animation: magic-cube 2s linear 0s 5 normal;
+    -khtml-animation: magic-cube 2s linear 0s 5 normal;
+    -o-animation: magic-cube 2s linear 0s 5 normal;
+    animation: magic-cube 2s linear 0s 5 normal;
+}
+
+.anima-block .anima-square:nth-child(2) {
+    -webkit-animation: magic-cube 2s linear 0.5s 3 normal;
+    -moz-animation: magic-cube 2s linear 0.5s 3 normal;
+    -ms-animation: magic-cube 2s linear 0.5s 3 normal;
+    -khtml-animation: magic-cube 2s linear 0.5s 3 normal;
+    -o-animation: magic-cube 2s linear 0.5s 3 normal;
+    animation: magic-cube 2s linear 0.5s 3 normal;
+}
+
+.anima-block .anima-square:nth-child(3) {
+    -webkit-animation: magic-cube 2s linear 1s 5 normal;
+    -moz-animation: magic-cube 2s linear 1s 5 normal;
+    -ms-animation: magic-cube 2s linear 1s 5 normal;
+    -khtml-animation: magic-cube 2s linear 1s 5 normal;
+    -o-animation: magic-cube 2s linear 1s 5 normal;
+    animation: magic-cube 2s linear 1s 5 normal;
+}
+
+.anima-block .anima-square:nth-child(4) {
+    -webkit-animation: magic-cube 2s linear 1.5s 3 normal;
+    -moz-animation: magic-cube 2s linear 1.5s 3 normal;
+    -ms-animation: magic-cube 2s linear 1.5s 3 normal;
+    -khtml-animation: magic-cube 2s linear 1.5s 3 normal;
+    -o-animation: magic-cube 2s linear 1.5s 3 normal;
+    animation: magic-cube 2s linear 1.5s 3 normal;
+}
+
+.clock-block {
+    width: 100vw;
+    height: 250px;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: calc(50% - 100px);
+    border: 2px solid grey;
+    border-radius: 25%;
+    -webkit-box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+    background: #f2d5fd;
+}
+
+.number-hours {
+    list-style-type: none;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.number-hours li:nth-child(1) {
+    position: absolute;
+    top: 3px;
+    left: 88px;
+}
+
+.number-hours li:nth-child(2) {
+    position: absolute;
+    top: 85px;
+    right: 5px;
+}
+
+.number-hours li:nth-child(3) {
+    position: absolute;
+    bottom: 3px;
+    left: 92px;
+}
+
+.number-hours li:nth-child(4) {
+    position: absolute;
+    top: 85px;
+    left: 5px;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+    -webkit-transform-origin: bottom center; 
+    -ms-transform-origin: bottom center; 
+    transform-origin: bottom center;
+}
+
+.hour-hand {
+    width: 3px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 99px;
+    background-color: black;
+    -webkit-animation: clock 43200s steps(60, end) infinite;
+    -moz-animation: clock 43200s steps(60, end) infinite;
+    -ms-zoom-animation: clock 43200s steps(60, end) infinite;
+    animation: clock 43200s steps(60, end) infinite;
+}
+
+.minute-hand {
+    width: 2px;
+    height: 65px;
+    position: absolute;
+    top: 35px;
+    left: 99px;
+    background-color: grey;
+    -webkit-animation: clock 3600s steps(60, end) infinite;
+    -moz-animation: clock 3600s steps(60, end) infinite;
+    -ms-zoom-animation: clock 3600s steps(60, end) infinite;
+    animation: clock 3600s steps(60, end) infinite;
+}
+
+.second-hand {
+    width: 1px;
+    height: 68px;
+    position: absolute;
+    top: 32px;
+    left: 100px;
+    background-color: orangered;
+    -webkit-animation: clock 60s steps(60, end) infinite;
+    -moz-animation: clock 60s steps(60, end) infinite;
+    -ms-zoom-animation: clock 60s steps(60, end) infinite;
+    animation: clock 60s steps(60, end) infinite;
+}
+
