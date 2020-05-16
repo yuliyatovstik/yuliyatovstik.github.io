@@ -1,1 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 1000px;
+}
+main {
+    flex: 1;
+}
+.wrapper {
+    width: 72.22%;
+    margin: 0 auto;
+}
+.blog {
+    background-color: thistle;
+    padding: 50px 0;
+}
+.blog .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blog__item {
+    width: 30%;
+    /* height: 250px; */
+    /* flex-basis: 250px; */ 
+    /* flex-grow: 1; */
+    padding: 10px;
+    border: 1px solid white;
+    background-color: violet;
+    text-align: center;
+    margin-bottom: 20px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+.blog__item:nth-child(4),
+.blog__item:nth-child(5) {
+    margin-left: auto;
+    margin-right: auto;
+}
+.blog__item__header{
+    margin-bottom: 10px;
+    min-height: 56px;
+}
+.wrap-text {
+    height: calc(100% - 66px);
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center; */
+    flex-direction: row;
+    align-items: center;
+}
 
+/* 320px 480px  576px 768px 992px 1024px 1200px 1440px 1630px максимум 5 точек выбирать */
+
+@media (max-width: 992px) {
+    .blog .wrapper{
+        justify-content: space-around;
+    }
+    .blog__item {
+        width: 48%;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 576px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+@media (max-width: 320px) {
+    .blog__item {
+        width: 100%;
+    }
+}
+
+/* @media (max-width: ) {} */
+
+.block {
+    background-color: teal;
+    border: 1px solid black;
+    border-radius: 4px;
+}
