@@ -1,1 +1,29 @@
+@font-face {
+    font-family: "ArialMT";
+    src: url("fonts/ArialMT.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Arial-BoldMT";
+    src: url("fonts/Arial-BoldMT.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Tahoma";
+    src: url("fonts/Tahoma.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "NexaRegular";
+    src: url("fonts/NexaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 
+body, li {
+    font-family: Tahoma;
+    background-color: cornsilk;
+}
