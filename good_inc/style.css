@@ -1,14 +1,14 @@
 @font-face {
-    font-family: "ArialMT";
-    src: url("fonts/ArialMT.ttf") format("truetype");
+    font-family: "Arial";
+    src: url("fonts/ArialRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 @font-face {
-    font-family: "Arial-BoldMT";
-    src: url("fonts/Arial-BoldMT.ttf") format("truetype");
+    font-family: "ArialBold";
+    src: url("fonts/ArialBold.ttf") format("truetype");
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
 }
 @font-face {
     font-family: "Tahoma";
@@ -17,13 +17,17 @@
     font-weight: normal;
 }
 @font-face {
-    font-family: "NexaRegular";
-    src: url("fonts/NexaRegular.ttf") format("truetype");
+    font-family: "Nexa-Regular";
+    src: url("fonts/Nexa-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body, li {
-    font-family: Tahoma;
+    font-family: Nexa-Regular, Arial;
     background-color: cornsilk;
 }
