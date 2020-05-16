@@ -27,23 +27,14 @@ main {
 }
 .blog__item {
     width: 30%;
-    /* height: 250px; */
-    /* flex-basis: 250px; */ 
-    /* flex-grow: 1; */
     padding: 10px;
     border: 1px solid white;
     background-color: violet;
     text-align: center;
-    margin-bottom: 20px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
+    margin-bottom: 15px;
 }
-.blog__item:nth-child(4),
-.blog__item:nth-child(5) {
-    margin-left: auto;
-    margin-right: auto;
+.blog__plusone {
+    width: 30%;
 }
 .blog__item__header{
     margin-bottom: 10px;
@@ -57,6 +48,11 @@ main {
     flex-direction: row;
     align-items: center;
 }
+.block {
+    background-color: teal;
+    border: 1px solid black;
+    border-radius: 4px;
+}
 
 /* 320px 480px  576px 768px 992px 1024px 1200px 1440px 1630px максимум 5 точек выбирать */
 
@@ -64,7 +60,8 @@ main {
     .blog .wrapper{
         justify-content: space-around;
     }
-    .blog__item {
+    .blog__item,
+    .blog__plusone {
         width: 48%;
         margin-bottom: 15px;
     }
@@ -78,12 +75,7 @@ main {
     .blog__item {
         width: 100%;
     }
-}
-
-/* @media (max-width: ) {} */
-
-.block {
-    background-color: teal;
-    border: 1px solid black;
-    border-radius: 4px;
+    .blog__plusone {
+        display: none;
+    }
 }
