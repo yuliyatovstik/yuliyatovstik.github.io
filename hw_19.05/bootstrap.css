@@ -1,0 +1,18 @@
+body {
+    min-height: 100vh;
+}
+.carousel-item {
+    max-height: 520px;
+}
+main {
+    padding-top: 70px;
+}
+.gallery,
+.gallery-img {
+    padding: 0;
+}
+.gallery-img img {
+    padding: 2%;
+}
+
+/* input:disabled */
