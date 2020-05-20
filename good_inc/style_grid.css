@@ -39,7 +39,9 @@ body {
 .nav,
 .footer,
 .search__social,
-.search__block {
+.search__block,
+.main,
+.main__image {
     padding: 0;
     margin: 0;
     border: 0;
@@ -115,6 +117,8 @@ body {
 .nav__item__link:hover {
     border-bottom: 4px solid #f26c4f;
     padding: 22px 0px;
+    text-decoration: none;
+    color: #ffffff;
 }
 .search__social {
     height: 70px;
@@ -124,12 +128,13 @@ body {
 }
 .search__form {
     position: relative;
-    
 }
 .search-input {
     height: 46px;
     width: 100%;
     padding-left: 20px;
+    -webkit-box-shadow: 0px 1px 1px 0;
+    -moz-box-shadow: 0px 1px 1px 0;
     box-shadow: 0px 1px 1px 0;
 }
 .search-input::placeholder {
@@ -137,24 +142,92 @@ body {
     font-weight: 700;
     color: #959595;
 }
-.fa-clock {
+.search-form .fa-clock {
     width: 23px;
     height: 23px;
     position: absolute;
     top: 27px;
     left: calc(100% - 28px);
     color: #f26c4f;
-
 }
-.img__bridge {
-    min-height: 390px;
+.social__but {
+    text-align: right;
 }
- 
-.footer {
+.social__but i {
+    margin: 0 2%;
+    padding-top: 30px;
+    font-size: 12px;
+    color: #8f8f8f;
+}
+.social__name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding-left: 5px;
+    color: #8f8f8f;
+}
+.main__image {
+    display: flex;
+    justify-content: flex-end;
     align-items: flex-end;
 }
-@media (max-width: 576px) {
-    .empty__area {
-        width: 50%;
-    }
+.img__bridge {
+    z-index: 1;
+    max-height: 390px;
+    min-height: 390px;
+    width: 100%;
+}
+.image__caption {
+    position: absolute;
+    z-index: 2;
+    width: 55%;
+    height: 70px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 3% 2% 0 5%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.main__block__content {
+    position: relative;
+    height: 390px;
+    padding: 0;
+    background-color: #373737;
+}
+.side__marker {
+    position: absolute;
+    width: 9px;
+    height: 390px;
+    background-color: #f26c4f;
+}
+.main__block__subheader {
+    position: absolute;
+    left: 12px;
+    margin: 45px 15% 0;
+}
+.main__subheader {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.26;
+    text-align: left;
+    color: #ffffff;
+}
+.main__content {
+    font-size: 12px;
+    line-height: 1.92;
+    text-align: left;
+    color: #a7a7a7;
+}
+.date__article {
+    text-align: right;
+}
+.date__article .fa-clock {
+    font-size: 18px;
+    color: #8f8f8f;
+}
+.date__content {
+    font-size: 12px;
+    color: #a7a7a7;
+}
+.footer {
+    display: flex;
+    align-items: flex-end;
 }
