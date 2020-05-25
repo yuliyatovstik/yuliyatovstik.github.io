@@ -1,0 +1,70 @@
+@import "variables";
+
+.page__header {
+    grid-column: 1 / 6;
+    height: 70px;
+    background: #373737;
+    .logo {
+        width: 200px;
+        height: 70px;
+        margin-left: $side-area-xl;
+        position: relative;
+        .icon__header {
+            width: 80px;
+            height: 70px;
+            position: absolute;
+            z-index: 1;
+            background-color: $primary-color;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 17px;
+                right: -32px;
+                border: 16px solid transparent;
+                border-left: 16px solid $primary-color;
+            }
+        }
+        .icon__logo {
+            position: absolute;
+            top: 5px;
+            left: 30px;
+            z-index: 3;
+            font-family: arial; 
+            font-size: 36px;
+            color: #ffffff;
+        }
+        .subheader {
+            position: absolute;
+            top: 22px;
+            left: 106px;
+            font-size: 18px;
+            font-style: normal;
+            color: #ffffff;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .page__header {
+        .logo {
+            margin-left: $side-area-lg;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .page__header {
+        .logo {
+            margin-left: $side-area-md;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .page__header {
+        .logo {
+            margin-left: $side-area-sm;
+        }
+    }
+}
+
+
+

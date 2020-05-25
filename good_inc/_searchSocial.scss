@@ -1,0 +1,93 @@
+@import "variables";
+
+.search__social {
+    grid-column: 2 / 3;
+    height: 70px;
+    position: relative;
+    .search__block {
+        display: inline-block;
+        width: 100%;
+        padding-top: 12px;
+        .search__form {
+            position: relative;
+            .search__input {
+                height: 46px;
+                width: 100%;
+                padding-left: 20px;
+                border: 0px;
+                -webkit-box-shadow: 0px 1px 1px 0;
+                -moz-box-shadow: 0px 1px 1px 0;
+                box-shadow: 0px 1px 1px 0;
+            }
+            .search__input::placeholder {
+                font-size: 12px;
+                font-weight: 700;
+                color: $comment-text-color;
+            }
+        }
+        .search__form .fa-clock {
+            font-size: 23px;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            color: $primary-color;
+        }
+    }
+}
+.social__but {
+    grid-column: 4 / 5;
+    width: auto;
+    text-align: end;
+    padding-top: 30px;
+    i {
+        margin: 0 2%;
+        font-family: Font Awesome 5 Brands;
+        font-size: 12px;
+        color: $comment-text-color;
+    }
+    .social__name {
+        font-family: Arial;
+        font-size: 12px;
+        padding-left: 5%;
+        color: $comment-text-color;
+    }
+}
+
+@media (max-width: 768px) {
+    .search__social {
+        grid-column: 2 / 3;
+    }
+    .search__social {
+        .search__block {
+            .search__form {
+                .search__input {
+                    width: 100%;
+                    min-width: 200px;
+                    padding-left: 10px;
+                }
+                .fa-clock {
+                font-size: 22px;
+                position: absolute;
+                right: 5px;
+                }
+            }
+        }
+    }
+    .social__but {
+        grid-column: 3 / 5;
+    }
+}
+@media (max-width: 576px) {
+    .search__social {
+        grid-column: 2 / 5;
+    }
+    .social__but {
+        grid-column: 2 / 5;
+        grid-template-rows: 70px;
+        padding-top: 0;
+        margin-bottom: 20px;
+        
+    }
+}
+
+
