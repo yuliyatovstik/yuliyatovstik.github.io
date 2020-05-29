@@ -80,13 +80,29 @@
 @media (max-width: 576px) {
     .search__social {
         grid-column: 2 / 5;
+        .search__block {
+            .search__form {
+                width: 50%;
+                min-width: 290px;
+                padding-left: 0;
+            }
+        }
     }
     .social__but {
         grid-column: 2 / 5;
         grid-template-rows: 70px;
         padding-top: 0;
         margin-bottom: 20px;
-        
+        margin-left: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .search__social {
+        .search__block {
+            .search__form {
+                padding-left: 15px;
+            }
+        }
     }
 }
 

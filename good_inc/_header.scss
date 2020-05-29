@@ -65,6 +65,13 @@
         }
     }
 }
+@media (max-width: 480px) {
+    .page__header {
+        .logo {
+            margin-left: 0;
+        }
+    }
+}
 
 
 

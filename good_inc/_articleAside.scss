@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 .card__block {
     .article__block {
@@ -24,6 +25,9 @@
                 font-weight: bold;
                 padding: 28px 35px 4px;
                 color: $secondary-color;
+                @media (max-width: 480px) {
+                    @include padding-title-ad;
+                }
             }
             .note__subheader__small {
                 font-size: 18px;
@@ -78,11 +82,16 @@
         box-shadow: 0px 1px 1px black;
         color: $secondary-light-color;
         text-align: left;
+        @media (max-width: 480px) {
+            margin-top: 10px;;
+        }
         .subheader__content {
             font-size: 30px;
             font-weight: bold;
             padding: 30px 50px;
-            
+            @media (max-width: 480px) {
+                @include padding-title-ad;
+            }
         }
         .img__content {
             width: 100%;
@@ -93,6 +102,9 @@
             font-weight: bold;
             line-height: 1.71;
             padding: 0px 50px 20px;
+            @media (max-width: 480px) {
+                @include padding-title-ad;
+            }
             .selected__text {
                 color: $primary-color;
             }
@@ -102,6 +114,9 @@
             line-height: 1.79;
             padding: 4px 50px 20px;
             color: $comment-text-color;
+            @media (max-width: 480px) {
+                @include padding-title-ad;
+            }
         }
     }
     .date__likes {
@@ -177,7 +192,7 @@
         .text__aside {
             font-size: 12px;
             font-weight: 400;
-            padding: 0px 25px 40px;
+            padding: 0px 25px 25px;
             line-height: 2;
             color: #ffffff;
         }
@@ -187,6 +202,9 @@
     text-align: left;
     text-shadow: 0px 1px 0 #ffffff;
     padding: 33px 10px 20px 16px;
+    @media (max-width: 480px) {
+        @include padding-title-ad;
+    }
     .aside__article__subheader {
         font-size: 19px;
         font-weight: bold;
@@ -249,3 +267,15 @@
         }
     }
 }
+@media (max-width: 480px) {
+    .card__block {
+        .aside__block {
+            .nav__aside {
+                width: calc(100% - 50px);
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+        }
+    }
+}
+

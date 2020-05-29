@@ -9,6 +9,10 @@
     .footer__content {
         margin-left: $side-area-xl;
         margin-right: $side-area-xl;
+        @media (max-width: 480px) {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
         .footer__nav {
             list-style-type: none;
             padding: 35px 0 20px 0;
@@ -17,7 +21,7 @@
                 .footer__item__link {
                     text-decoration: none;
                     font-size: 12px;
-                    padding-right: 20px;
+                    padding: 5px 10px;
                     text-align: left;
                     color: #ffffff;
                 }
@@ -28,9 +32,9 @@
             color: $comment-text-color;
             text-align: left;
             line-height: 1.91;
+            padding-bottom: 25px;
         }
     }
-
 }
 
 @media (max-width: 1200px) {

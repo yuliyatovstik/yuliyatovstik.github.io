@@ -5,6 +5,7 @@
 @import "blockContentCard";
 @import "articleAside";
 @import "footer";
+@import "mixins";
 
 @font-face {
     font-family: "Arial";
@@ -64,8 +65,15 @@
     }
 }
 @media (max-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: $side-area-sm 1fr 1fr 1fr $side-area-sm;
+    }
+}
+@media (max-width: 480px) {
     * {
         body {
+            grid-template-columns: 0px 1fr 1fr 1fr 0px;
             .side__free__left {
                 grid-column: 1 / 1;
                 grid-row: 3 / 3;
