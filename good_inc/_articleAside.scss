@@ -174,10 +174,24 @@
     background-color: $secondary-color;
     max-width: 100%;
     position: relative;
-    .img__marker {
+    .triangle__marker {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 0px;
+        right: 0px;
+        display: inline-block;
+        width: 77px;
+        height: 77px;
+        border-style: solid;
+        border-width: 0 77px 77px 0;
+        border-color: transparent $primary-color transparent transparent;
+        .triangle__plus {
+            position: absolute;
+            top: 8px;
+            right: -63px;
+            z-index: 2;
+            font-size: 28px;
+            color: white;
+        }
     }
     .body__aside {
         font-family: Arial, Helvetica, sans-serif;

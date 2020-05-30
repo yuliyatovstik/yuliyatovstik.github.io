@@ -79,17 +79,32 @@
     grid-gap: 20px;
     .card__cell {
         width: 100%;
+        position: relative;
         background-color: #ffffff;
         margin-top: 15px;
         -webkit-box-shadow: 0px 1px 0 0 #d3d3d3;
         -moz-box-shadow: 0px 1px 0 0 #d3d3d3;
         box-shadow: 0px 1px 0 0 #d3d3d3;
-        .img__marker {
-            position: relative;
-            .triangle__img {
+        .card__img {
+            object-fit: cover;
+        }
+        .triangle__marker {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            display: inline-block;
+            width: 77px;
+            height: 77px;
+            border-style: solid;
+            border-width: 0 77px 77px 0;
+            border-color: transparent $primary-color transparent transparent;
+            .triangle__plus {
                 position: absolute;
-                top: 0px;
-                right: 0px;
+                top: 8px;
+                right: -63px;
+                z-index: 2;
+                font-size: 28px;
+                color: white;
             }
         }
         .body__card {

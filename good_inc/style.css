@@ -129,6 +129,7 @@
   width: 100%;
   padding-left: 20px;
   border: 0px;
+  outline: none;
   -webkit-box-shadow: 0px 1px 1px 0;
   -moz-box-shadow: 0px 1px 1px 0;
   box-shadow: 0px 1px 1px 0;
@@ -200,7 +201,7 @@
     grid-template-rows: 70px;
     padding-top: 0;
     margin-bottom: 20px;
-    margin-left: 15px;
+    margin-right: 10px;
   }
 }
 @media (max-width: 480px) {
@@ -291,19 +292,34 @@
 }
 .card__block .card__cell {
   width: 100%;
+  position: relative;
   background-color: #ffffff;
   margin-top: 15px;
   -webkit-box-shadow: 0px 1px 0 0 #d3d3d3;
   -moz-box-shadow: 0px 1px 0 0 #d3d3d3;
   box-shadow: 0px 1px 0 0 #d3d3d3;
 }
-.card__block .card__cell .img__marker {
-  position: relative;
+.card__block .card__cell .card__img {
+  object-fit: cover;
 }
-.card__block .card__cell .img__marker .triangle__img {
+.card__block .card__cell .triangle__marker {
   position: absolute;
   top: 0px;
   right: 0px;
+  display: inline-block;
+  width: 77px;
+  height: 77px;
+  border-style: solid;
+  border-width: 0 77px 77px 0;
+  border-color: transparent #f26c4f transparent transparent;
+}
+.card__block .card__cell .triangle__marker .triangle__plus {
+  position: absolute;
+  top: 8px;
+  right: -63px;
+  z-index: 2;
+  font-size: 28px;
+  color: white;
 }
 .card__block .card__cell .body__card {
   font-family: Arial, Helvetica, sans-serif;
@@ -572,10 +588,24 @@
   max-width: 100%;
   position: relative;
 }
-.aside__content .img__marker {
+.aside__content .triangle__marker {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  width: 77px;
+  height: 77px;
+  border-style: solid;
+  border-width: 0 77px 77px 0;
+  border-color: transparent #f26c4f transparent transparent;
+}
+.aside__content .triangle__marker .triangle__plus {
+  position: absolute;
+  top: 8px;
+  right: -63px;
+  z-index: 2;
+  font-size: 28px;
+  color: white;
 }
 .aside__content .body__aside {
   font-family: Arial, Helvetica, sans-serif;
