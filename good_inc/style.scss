@@ -36,6 +36,7 @@
     margin: 0;
     padding: 0;
     body {
+        box-sizing: border-box;
         display: grid;
         grid-template-columns: $side-area-xl 1fr 1fr 1fr $side-area-xl;
         grid-template-rows: 70px minmax(70px, max-content)  minmax(70px, max-content) minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content);

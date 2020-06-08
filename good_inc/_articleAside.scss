@@ -2,6 +2,7 @@
 @import "mixins";
 
 .card__block {
+    grid-template-columns: repeat(3, 1fr);
     .article__block {
         grid-column: 1 / 3;
     }

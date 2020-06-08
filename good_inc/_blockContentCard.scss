@@ -23,8 +23,6 @@
     height: 390px;
     background-color: #373737;
     min-width: 300px;
-    display: flex;
-    flex: 0 0 auto;
     .side__marker {
         position: absolute;
         width: 9px;
@@ -72,12 +70,14 @@
     }
 }
 .card__block {
+    box-sizing: border-box;
     grid-column: 2 / 5;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: minmax(min-content max-content);
     grid-gap: 20px;
     .card__cell {
+        box-sizing: border-box;
         width: 100%;
         position: relative;
         background-color: #ffffff;
@@ -87,6 +87,7 @@
         box-shadow: 0px 1px 0 0 #d3d3d3;
         .card__img {
             object-fit: cover;
+            min-width: 100%;
         }
         .triangle__marker {
             position: absolute;
@@ -120,7 +121,6 @@
             .text__card {
                 font-size: 12px;
                 font-weight: 400;
-                align-items: flex-end;
                 padding: 0px 25px 25px;
                 line-height: 2;
                 color: $secondary-light-color;
@@ -162,7 +162,6 @@
     }
     .card__block {
         grid-column: 2 / 5;       
-        grid-auto-flow: row dense;
         grid-gap: 10px;  
     }
 }
