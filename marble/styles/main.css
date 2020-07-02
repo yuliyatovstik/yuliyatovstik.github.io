@@ -1236,7 +1236,6 @@ html {
 
   .header__nav .wrapper .block-nav .nav {
     height: 0px;
-    display: block;
     flex-direction: column;
     align-items: center;
     position: absolute;
@@ -1249,23 +1248,18 @@ html {
     list-style: none;
     text-align: center;
     background-color: #555555;
-    box-shadow: 1px 0px 6px #909090;
-    -webkit-transition: translateY(100%);
-    -moz-transition: translateY(100%);
-    -o-transition: translateY(100%);
-    transition: translateY(100%);
-    max-height: 0;
-    font-size: 0;
-    overflow: hidden;
-    transition: 1s all;
+    transition: 0.5s all;
   }
 
   .header__nav .wrapper .block-nav .nav__items {
     display: block;
+    height: 0px;
+    color: #555555;
+    transition: height 0.5s;
   }
 
   .header__nav .wrapper .block-nav .nav__items .nav__items-link {
-    display: block;
+    display: none;
     padding: 12px 24px;
     color: #e5e5e5;
     font-size: 20px;
@@ -1339,11 +1333,16 @@ html {
     height: 282px;
     opacity: 1;
     left: 0;
-    -webkit-transition: translateY(100%);
-    -moz-transition: translateY(100%);
-    -o-transition: translateY(100%);
-    transition: translateY(100%);
     transition: height 0.5s;
+  }
+
+  #menu__toggle:checked ~ .nav > .nav__items {
+    height: 47px;
+    transition: height 0.5s;
+  }
+
+  #menu__toggle:checked ~ .nav > .nav__items > .nav__items-link {
+    display: block;
   }
 
   .header-banner {
