@@ -566,16 +566,12 @@ nav.active #burger:before {
 
 @media (max-width: 480px) {
   nav.active .navigation__button {
+    margin-right: 0;
     position: relative;
     top: 75vh;
     display: flex;
     right: 50%;
-    transform: translateX(78%);
-  }
-}
-@media (max-width: 320px) {
-  nav.active .navigation__button {
-    transform: translateX(70%);
+    transform: translateX(50%);
   }
 }
 
