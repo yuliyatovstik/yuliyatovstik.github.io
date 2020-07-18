@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const burger = document.querySelector("#burger-button");
     const nav = document.querySelector("nav");
+    const header = document.querySelector(".header");
     burger.addEventListener("click", function() {
         nav.classList.toggle("active");
     })
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $(window).scroll(function () {
         // console.log($(window).scrollTop());
         if ($(window).scrollTop() > 50) {
-            $("header").css("background", "#3B4750")
+            $("header").css("background", "rgba(0,0,0,0.8)")
         } else {
             $("header").css("background", "rgba(0,0,0,0)")
         }

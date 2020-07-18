@@ -423,6 +423,8 @@ template {
   .navigation__list {
     width: 100%;
     justify-content: flex-start;
+    top: 0px;
+    padding-top: 100px;
   }
 }
 .navigation__item {
@@ -447,6 +449,7 @@ template {
   .navigation__item {
     background: #3B4750;
     height: 80px;
+    font-size: 20px;
     padding-top: 30px;
   }
 }
