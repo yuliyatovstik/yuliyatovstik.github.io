@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // console.log($(window).scrollTop());
         if ($(window).scrollTop() > 50) {
             $("header").css("background", "#3B4750")
+        } else {
+            $("header").css("background", "none")
         }
     })
 //}
