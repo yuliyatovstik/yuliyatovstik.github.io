@@ -623,6 +623,7 @@ section {
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
+  width: 100%;
   padding: 0 15px;
 }
 
@@ -634,16 +635,19 @@ section {
 
 .about-us__subtitle-item {
   font-size: 30px;
+  color: #2f3234;
+  text-transform: none;
+  line-height: 1;
   text-align: center;
   margin-bottom: 40px;
-  color: #2f3234;
 }
 
 .about-us__text {
   font-size: 18px;
+  color: #2f3234;
+  text-transform: none;
   line-height: 30px;
   text-align: center;
-  color: #2f3234;
   max-width: 370px;
 }
 
@@ -771,9 +775,9 @@ section {
 
 .burgers__description-currency {
   font-size: 30px;
-  line-height: 26px;
   color: #e45028;
   text-transform: uppercase;
+  line-height: 26px;
 }
 
 .burgers__description-button-link {
@@ -875,7 +879,7 @@ section {
   font-size: 14px;
   color: #ffffff;
   text-transform: none;
-  line-height: 26px;
+  line-height: 14px;
   font-family: "Ubuntu-Bold";
 }
 
@@ -992,15 +996,16 @@ section {
   display: none;
 }
 
-.menu__button.active ~ .menu__text {
+.menu__item.active > .menu__text {
   padding: 65px 60px 50px 40px;
   width: 100%;
   transition: width 0.3s;
   display: flex;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-.menu__button.active > .menu__subtitle {
+.menu__item.active > .menu__button > .menu__subtitle {
   color: #f9b43b;
 }
 
@@ -1008,7 +1013,7 @@ section {
   background-image: url(../img/background-photo.png);
   width: 100%;
   background-size: cover;
-  background-position: left;
+  background-position: center;
   box-sizing: border-box;
 }
 
@@ -1346,10 +1351,15 @@ p {
     background-position: center;
   }
 
+  .about-us__content {
+    padding: 50px 4% 0;
+  }
+
   .about-us__subtitle {
     background-position: center;
     width: 100%;
     padding-left: 50px;
+    font-size: 72px;
   }
 
   .burgers {
@@ -1404,6 +1414,345 @@ p {
 
   .slick-list {
     height: 420px !important;
+  }
+
+  .team {
+    background-position: left;
+  }
+
+  .team:after {
+    width: 75%;
+  }
+
+  .team__content {
+    left: calc(25% + 50px);
+  }
+
+  .footer__content {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-us__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  .about-us__img {
+    height: 120px;
+    width: 25%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .about-us__item-content {
+    width: 67%;
+  }
+
+  .about-us__subtitle-item {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .about-us__text {
+    text-align: left;
+    max-width: 470px;
+  }
+
+  .burgers-section {
+    height: max-content;
+    padding: 50px 0;
+  }
+
+  .burgers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .burgers__content {
+    flex-direction: column;
+  }
+
+  .burgers__image {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .burgers__calories {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+  }
+
+  .burgers__description {
+    width: 100%;
+    align-items: center;
+  }
+
+  .burgers__description-name {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .burgers__description-text {
+    max-width: 100%;
+    padding: 20px 10px 80px;
+  }
+
+  .slick-list {
+    height: max-content !important;
+  }
+
+  .team {
+    min-height: 360px;
+    height: max-content;
+    padding-bottom: 80px;
+  }
+
+  .team:after {
+    width: 100%;
+  }
+
+  .team__content {
+    position: relative;
+    height: max-content;
+    top: 50px;
+    left: 50px;
+  }
+
+  .team__subtitle {
+    margin-bottom: 25px;
+  }
+
+  .menu__title {
+    top: 50px;
+    left: 50px;
+  }
+
+  .menu__item {
+    max-width: 100%;
+  }
+
+  .map {
+    background-image: url(../img/background-map-small.png);
+    height: 460px;
+    background-size: 150%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-us__subtitle {
+    font-size: 50px;
+  }
+
+  .burgers__image {
+    padding-top: 70px;
+  }
+
+  .burgers__description-count {
+    letter-spacing: -4px;
+  }
+
+  .team__subtitle {
+    font-size: 50px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .menu__title {
+    font-size: 50px;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 768px;
+    width: 100%;
+  }
+
+  .menu__item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-height: 85px;
+    width: 100%;
+  }
+
+  .menu__button {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .menu__subtitle {
+    font-size: 32px;
+  }
+
+  .menu__text {
+    width: 100%;
+    height: 0px;
+    transition: height 0.3s;
+  }
+
+  .menu__item.active > .menu__text {
+    height: 100%;
+    transition: height 0.3s;
+  }
+
+  .menu__item.active {
+    max-height: 598px;
+  }
+
+  .menu__item.active > .menu__button {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+    height: 598px;
+  }
+
+  .quotes {
+    height: 576px;
+  }
+
+  .quotes__content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .vertical-nav {
+    right: 30px;
+  }
+
+  .burgers-section {
+    padding: 25px 0;
+  }
+
+  .burgers__img {
+    width: 250px;
+    height: auto;
+  }
+
+  .burgers__composition {
+    width: 75px;
+    height: 75px;
+  }
+
+  .burgers__description-name {
+    line-height: 40px;
+  }
+
+  .burgers__description-text {
+    line-height: 18px;
+    padding-bottom: 90px;
+  }
+
+  .burgers__description-price {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .burgers__description-count {
+    font-size: 50px;
+    letter-spacing: 0px;
+  }
+
+  .burgers__description-currency {
+    font-size: 20px;
+    color: #e45028;
+    text-transform: uppercase;
+    line-height: 32px;
+  }
+
+  .menu__item.active > .menu__text {
+    padding: 15px 60px 15px 10px;
+  }
+
+  .footer {
+    height: max-content;
+  }
+
+  .footer__content {
+    flex-direction: column-reverse;
+  }
+
+  .footer__contacts {
+    padding: 15px 0;
+  }
+
+  .footer__social-button {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  .about-us__content {
+    padding: 25px 4% 0;
+  }
+
+  .about-us__subtitle {
+    font-size: 45px;
+    padding: 0 0 15px 0;
+    text-align: center;
+  }
+
+  .about-us__item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us__img {
+    width: 20%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .about-us__item-content {
+    width: 100%;
+  }
+
+  .about-us__subtitle-item {
+    text-align: center;
+  }
+
+  .about-us__text {
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .team__content {
+    top: 25px;
+    left: 4%;
+  }
+
+  .team__about-crewman {
+    margin-left: 4%;
+  }
+
+  .team__data-crewman {
+    margin-left: 20px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

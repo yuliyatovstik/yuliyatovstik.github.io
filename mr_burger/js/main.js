@@ -298,33 +298,68 @@ $(document).ready(function () {
   });
 }); //menu-click
 
-var menuItem = document.querySelectorAll('.menu__button');
+var menuItem = document.querySelectorAll('.menu__item');
 
-var _loop = function _loop(_i9) {
-  menuItem[_i9].addEventListener('click', function (e) {
-    e.preventDefault();
+if (window.innerWidth > 768) {
+  var _loop = function _loop(_i9) {
+    menuItem[_i9].addEventListener('click', function (e) {
+      e.preventDefault();
 
-    menuItem[_i9].classList.toggle('active');
-  });
-};
+      menuItem[_i9].classList.toggle('active');
+    });
+  };
 
-for (var _i9 = 0; _i9 < menuItem.length; _i9++) {
-  _loop(_i9);
-} //team-active
+  for (var _i9 = 0; _i9 < menuItem.length; _i9++) {
+    _loop(_i9);
+  }
+}
+
+if (window.innerWidth <= 768) {
+  var _loop2 = function _loop2(_i10) {
+    menuItem[_i10].addEventListener('click', function (e) {
+      e.preventDefault();
+
+      for (var j = 0; j < menuItem.length; j++) {
+        if (menuItem[j].classList.contains('active') && menuItem[j] !== menuItem[_i10]) {
+          menuItem[j].classList.toggle('active');
+        }
+      }
+
+      menuItem[_i10].classList.toggle('active');
+    });
+  };
+
+  for (var _i10 = 0; _i10 < menuItem.length; _i10++) {
+    _loop2(_i10);
+  }
+} // let menuList = document.querySelector('.menu__list');
+// let menuText = document.querySelectorAll('.menu__text');
+// if (window.innerWidth <= 576) {
+//     menuList.style.maxHeight = window.innerWidth + 'px';
+//     for (let j = 0; j < menuItem.length; j++) {
+//         menuItem[j].style.height = window.innerWidth + 'px';
+//         menuItem[j].style.maxHeight = window.innerWidth + 'px';
+//     }
+//     for (let j = 0; j < menuItem.length; j++) {
+//         menuText[j].style.width = window.innerWidth + 'px';
+//         // menuText[j].style.maxHeight = window.innerWidth + 'px';
+//     }
+// }
+//team-active
 
 
 var teamList = document.querySelectorAll(".team__item");
 
-var _loop2 = function _loop2(_i10) {
-  teamList[_i10].addEventListener('click', function (e) {
+var _loop3 = function _loop3(_i11) {
+  teamList[_i11].addEventListener('click', function (e) {
     e.preventDefault();
 
-    teamList[_i10].classList.toggle("team-active");
+    teamList[_i11].classList.toggle("team-active");
   });
 };
 
-for (var _i10 = 0; _i10 < teamList.length; _i10++) {
-  _loop2(_i10);
+for (var _i11 = 0; _i11 < teamList.length; _i11++) {
+  _loop3(_i11);
 } //modal window quotes
 
 
@@ -356,8 +391,8 @@ document.querySelector(".quotes").onclick = function (event) {
 
 var buttonsBurgers = document.querySelectorAll(".burgers__description-button-order");
 
-for (var _i11 = 0; _i11 < buttonsBurgers.length; _i11++) {
-  buttonsBurgers[_i11].addEventListener('click', function () {
+for (var _i12 = 0; _i12 < buttonsBurgers.length; _i12++) {
+  buttonsBurgers[_i12].addEventListener('click', function () {
     removeActive();
   });
 } //footer__social-button
