@@ -446,9 +446,11 @@ ul {
 }
 
 .header__logo {
-  margin-top: 10px;
+  margin: 10px 0 0 10px;
   width: 101px;
   height: 79px;
+  position: relative;
+  z-index: 5;
 }
 
 .header__block {
@@ -492,9 +494,10 @@ ul {
 
 .header__nav-item-link {
   font-size: 13px;
-  color: #ffffff;
-  text-decoration: none;
+  color: #fff;
   text-transform: uppercase;
+  line-height: 1;
+  text-decoration: none;
 }
 
 .header__button-link {
@@ -512,6 +515,17 @@ ul {
   background-color: #e45028;
   border-radius: 5px;
   box-sizing: border-box;
+}
+
+.header .fa-hamburger,
+.header .fa-times {
+  display: none;
+  font-size: 50px;
+  color: #f9b43b;
+  position: absolute;
+  right: 40px;
+  z-index: 5;
+  cursor: pointer;
 }
 
 section {
@@ -574,16 +588,18 @@ section {
 
 .banner__subtitle {
   font-size: 72px;
-  line-height: 86px;
-  text-align: left;
   color: #f9b43b;
   text-transform: uppercase;
+  line-height: 86px;
+  text-align: left;
 }
 
 .banner__text-subtitle {
   font-size: 65px;
-  text-align: left;
   color: #fff;
+  text-transform: none;
+  line-height: 1;
+  text-align: left;
 }
 
 .about-us {
@@ -809,6 +825,11 @@ section {
 
 .slick-track {
   display: flex;
+}
+
+.arrows {
+  width: 20px;
+  height: 38px;
 }
 
 .team {
@@ -1347,12 +1368,47 @@ p {
 }
 
 @media (max-width: 1024px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .header {
+    width: max-content;
+    justify-content: center;
+    left: calc((100% - 761px) / 2);
+  }
+
+  .banner__content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .banner__image {
+    margin-right: 0;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner__image img {
+    width: 70%;
+  }
+
+  .banner__subtitle {
+    text-align: center;
+  }
+
+  .banner__text-subtitle {
+    text-align: center;
+  }
+
   .about-us {
     background-position: center;
   }
 
   .about-us__content {
-    padding: 50px 4% 0;
+    padding: 50px 20px 0;
   }
 
   .about-us__subtitle {
@@ -1428,12 +1484,110 @@ p {
     left: calc(25% + 50px);
   }
 
+  .delivery {
+    align-items: flex-start;
+  }
+
+  .delivery__subtitle {
+    max-width: 85%;
+    padding: 30px 0 25px 0px;
+    margin: 0 auto;
+    line-height: 65px;
+  }
+
+  .delivery__form {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .footer__content {
     padding: 10px 20px;
   }
 }
 
 @media (max-width: 768px) {
+  .header {
+    width: 95%;
+    left: 0;
+  }
+
+  .header__block {
+    flex-direction: row-reverse;
+    width: calc(100% - 112px);
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    right: -5px;
+    z-index: 1;
+    width: 50%;
+    min-width: 300px;
+    background: #2f3234;
+  }
+
+  .header__nav-item {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 12px;
+    box-sizing: border-box;
+  }
+
+  .header__nav-item:hover {
+    text-decoration: none;
+    background: #3b3d3f;
+  }
+
+  .header__nav-item:after {
+    content: "";
+  }
+
+  .header__nav-item-link {
+    font-size: 22px;
+  }
+
+  .header__nav-item-link:hover {
+    color: #f9b43b;
+  }
+
+  .header__button-link {
+    position: absolute;
+    right: calc(50% - 50px);
+    z-index: 5;
+  }
+
+  .header .fa-hamburger {
+    display: block;
+  }
+
+  .header .fa-hamburger.active {
+    display: none;
+  }
+
+  .header .fa-times {
+    display: none;
+  }
+
+  .header .fa-times.active {
+    display: block;
+  }
+
+  .header .fa-hamburger.active ~ .header__nav {
+    display: block;
+  }
+
+  .vertical-nav {
+    display: none;
+  }
+
   .about-us__list {
     flex-direction: column;
     align-items: flex-start;
@@ -1518,7 +1672,7 @@ p {
   }
 
   .team {
-    min-height: 360px;
+    min-height: 620px;
     height: max-content;
     padding-bottom: 80px;
   }
@@ -1532,6 +1686,7 @@ p {
     height: max-content;
     top: 50px;
     left: 50px;
+    width: calc(100% - 50px);
   }
 
   .team__subtitle {
@@ -1552,9 +1707,33 @@ p {
     height: 460px;
     background-size: 150%;
   }
+
+  .map .fa-arrow-alt-circle-up.active {
+    position: fixed;
+    bottom: 35px;
+    right: 25px;
+    z-index: 1000;
+    font-size: 60px;
+    color: #e45028;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 576px) {
+  .header__nav-list {
+    width: 75%;
+  }
+
+  .banner__subtitle {
+    font-size: 50px;
+  }
+
+  .banner__text-subtitle {
+    font-size: 40px;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
   .about-us__subtitle {
     font-size: 50px;
   }
@@ -1602,6 +1781,7 @@ p {
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
+    height: 100vw;
   }
 
   .menu__subtitle {
@@ -1638,12 +1818,45 @@ p {
 
   .quotes__content {
     width: 90%;
+    box-sizing: border-box;
+  }
+
+  .delivery__subtitle {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .delivery__contacts-data,
+  .delivery__order-details {
+    width: 380px;
+  }
+
+  .delivery .name-phone input {
+    width: 180px;
+  }
+
+  .delivery .address-block input {
+    width: 80px;
   }
 }
 
 @media (max-width: 480px) {
-  .vertical-nav {
-    right: 30px;
+  .header {
+    width: 100%;
+  }
+
+  .header__nav-list {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    padding: 100px 0;
+    box-sizing: border-box;
+  }
+
+  .header .fa-hamburger,
+  .header .fa-times {
+    right: 40px;
   }
 
   .burgers-section {
@@ -1708,8 +1921,16 @@ p {
 }
 
 @media (max-width: 460px) {
+  .banner {
+    height: 576px;
+  }
+
+  .banner__subtitle {
+    font-size: 45px;
+  }
+
   .about-us__content {
-    padding: 25px 4% 0;
+    padding: 25px 20px 0;
   }
 
   .about-us__subtitle {
@@ -1742,17 +1963,42 @@ p {
     text-align: center;
   }
 
-  .team__content {
-    top: 25px;
-    left: 4%;
-  }
-
   .team__about-crewman {
     margin-left: 4%;
   }
 
   .team__data-crewman {
     margin-left: 20px;
+  }
+
+  .delivery__contacts-data,
+  .delivery__order-details {
+    width: 280px;
+  }
+
+  .delivery .name-phone input {
+    width: 135px;
+  }
+
+  .delivery .address-block input {
+    width: 65px;
+  }
+
+  .delivery .payment-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__button-link {
+    right: calc(50% - 68px);
+  }
+
+  .header .fa-hamburger,
+  .header .fa-times {
+    right: 20px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

@@ -283,8 +283,8 @@ $(document).ready(function () {
       // speed: 1000,
       slidesToShow: 1,
       adaptiveHeight: true,
-      prevArrow: "<img src='img/arrow-left.png'>",
-      nextArrow: "<img src='img/arrow-right.png'>"
+      prevArrow: "<img src='img/arrow-left.png' class='arrows'>",
+      nextArrow: "<img src='img/arrow-right.png' class='arrows'>"
     });
   } //header-nav click
 
@@ -332,20 +332,7 @@ if (window.innerWidth <= 768) {
   for (var _i10 = 0; _i10 < menuItem.length; _i10++) {
     _loop2(_i10);
   }
-} // let menuList = document.querySelector('.menu__list');
-// let menuText = document.querySelectorAll('.menu__text');
-// if (window.innerWidth <= 576) {
-//     menuList.style.maxHeight = window.innerWidth + 'px';
-//     for (let j = 0; j < menuItem.length; j++) {
-//         menuItem[j].style.height = window.innerWidth + 'px';
-//         menuItem[j].style.maxHeight = window.innerWidth + 'px';
-//     }
-//     for (let j = 0; j < menuItem.length; j++) {
-//         menuText[j].style.width = window.innerWidth + 'px';
-//         // menuText[j].style.maxHeight = window.innerWidth + 'px';
-//     }
-// }
-//team-active
+} //team-active
 
 
 var teamList = document.querySelectorAll(".team__item");
@@ -405,6 +392,16 @@ document.querySelector(".footer__social-button").addEventListener('click', funct
 var submitOrder = document.querySelector(".submit-order").addEventListener('click', function () {
   removeActive();
 });
+var buttonUp = document.querySelector(".fa-arrow-alt-circle-up");
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 500) {
+    buttonUp.classList.add("active");
+  }
+
+  if (window.scrollY <= 500 && buttonUp.classList.contains("active")) {
+    buttonUp.classList.remove("active");
+  }
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
@@ -427,7 +424,16 @@ var submitOrder = document.querySelector(".submit-order").addEventListener('clic
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+var burger = document.querySelector(".fa-hamburger");
+var closeBurger = document.querySelector(".fa-times");
+burger.addEventListener("click", function () {
+  burger.classList.toggle('active');
+  closeBurger.classList.toggle('active');
+});
+closeBurger.addEventListener("click", function () {
+  closeBurger.classList.toggle('active');
+  burger.classList.toggle('active');
+});
 
 /***/ }),
 
