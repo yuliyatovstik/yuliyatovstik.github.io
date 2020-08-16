@@ -433,6 +433,7 @@ ul {
 .wrapper {
   width: 940px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .header {
@@ -443,6 +444,7 @@ ul {
   position: absolute;
   top: 0;
   left: calc((100% - 940px) / 2);
+  box-sizing: border-box;
 }
 
 .header__logo {
@@ -532,6 +534,7 @@ section {
   height: 1000px;
   position: relative;
   font-family: "Ubuntu-Regular";
+  box-sizing: border-box;
 }
 
 .vertical-nav {
@@ -615,6 +618,7 @@ section {
   align-items: center;
   flex-direction: column;
   padding: 225px 15% 0;
+  box-sizing: border-box;
 }
 
 .about-us__subtitle {
@@ -624,6 +628,7 @@ section {
   text-transform: uppercase;
   line-height: 65px;
   padding-bottom: 50px;
+  box-sizing: border-box;
 }
 
 .about-us__list {
@@ -1244,17 +1249,19 @@ section {
 }
 
 .footer__address {
-  color: #ffffff;
-  font-family: "Ubuntu-Regular";
   font-size: 14px;
+  color: #fff;
+  text-transform: none;
   line-height: 20px;
+  font-family: "Ubuntu-Regular";
 }
 
 .footer__phone {
-  color: #e45028;
-  font-family: "Ubuntu-Bold";
   font-size: 14px;
+  color: #e45028;
+  text-transform: none;
   line-height: 20px;
+  font-family: "Ubuntu-Bold";
 }
 
 .footer__social-button {
@@ -1414,7 +1421,7 @@ p {
   .about-us__subtitle {
     background-position: center;
     width: 100%;
-    padding-left: 50px;
+    padding-left: 30px;
     font-size: 72px;
   }
 
@@ -1504,12 +1511,13 @@ p {
 
   .footer__content {
     padding: 10px 20px;
+    box-sizing: border-box;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    width: 95%;
+    width: 100%;
     left: 0;
   }
 
@@ -1526,7 +1534,7 @@ p {
     flex-direction: column;
     position: absolute;
     top: 85px;
-    right: -5px;
+    right: 20px;
     z-index: 1;
     width: 50%;
     min-width: 300px;
@@ -1817,7 +1825,7 @@ p {
   }
 
   .quotes__content {
-    width: 90%;
+    width: 80%;
     box-sizing: border-box;
   }
 
@@ -1857,6 +1865,10 @@ p {
   .header .fa-hamburger,
   .header .fa-times {
     right: 40px;
+  }
+
+  .banner {
+    height: 576px;
   }
 
   .burgers-section {
@@ -1899,8 +1911,34 @@ p {
     line-height: 32px;
   }
 
+  .team {
+    min-height: 576px;
+    height: max-content;
+    padding-bottom: 80px;
+  }
+
+  .menu {
+    height: 576px;
+  }
+
+  .menu__subtitle {
+    font-size: 25px;
+  }
+
+  .menu__text {
+    line-height: 16px;
+  }
+
   .menu__item.active > .menu__text {
     padding: 15px 60px 15px 10px;
+  }
+
+  .menu__item.active {
+    max-height: 406px;
+  }
+
+  .menu__item.active > .menu__button {
+    height: 406px;
   }
 
   .footer {
@@ -1921,10 +1959,6 @@ p {
 }
 
 @media (max-width: 460px) {
-  .banner {
-    height: 576px;
-  }
-
   .banner__subtitle {
     font-size: 45px;
   }
