@@ -7,6 +7,7 @@ let countZero = 0;
 fieldGame.addEventListener('click', function(event) {
     let target = event.target;
     if (target.tagName != 'P') return;
+    if (target.classList.contains('active-cross') || target.classList.contains("active-zero")) return;
     addClass(target);
     checkClass();
     checkClicks();
