@@ -22,6 +22,7 @@ body {
     background: lightsteelblue;
 }
 
+
 @keyframes magic-cube {
     0% {
         margin-left: 50px;
@@ -231,7 +232,7 @@ body {
     top: 10px;
     left: 20px;
     margin: 5px;
-    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    /* -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
     box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
     background:rgb(26, 35, 63);
@@ -240,9 +241,9 @@ body {
     -ms-animation: magic-cube 2s linear 0s 5 normal;
     -khtml-animation: magic-cube 2s linear 0s 5 normal;
     -o-animation: magic-cube 2s linear 0s 5 normal;
-    animation: magic-cube 2s linear 0s 5 normal;
+    animation: magic-cube 2s linear 0s 5 normal; */
 }
-
+/*
 .anima-block .anima-square:nth-child(2) {
     -webkit-animation: magic-cube 2s linear 0.5s 3 normal;
     -moz-animation: magic-cube 2s linear 0.5s 3 normal;
@@ -268,8 +269,41 @@ body {
     -khtml-animation: magic-cube 2s linear 1.5s 3 normal;
     -o-animation: magic-cube 2s linear 1.5s 3 normal;
     animation: magic-cube 2s linear 1.5s 3 normal;
-}
+} */
 
+@keyframes live-callback {
+    0% {
+        transform: rotate(10deg);
+        border: 2px solid rgba(28, 44, 59, 0.8);
+        border-radius: 50%;
+    }
+    25% {
+        border: 3px solid rgba(28, 44, 59, 0.7);
+        border-radius: 50%;
+    }  
+    50% {
+        transform: rotate(120deg);
+        border: 4px solid rgba(28, 44, 59, 0.4);
+        border-radius: 50%;
+    }
+    75% {
+        border: 5px solid rgba(28, 44, 59, 0.2);
+        border-radius: 50%;
+    }    
+    100% {
+        transform: rotate(10deg);
+        border: 6px solid rgba(28, 44, 59, 0);
+        border-radius: 50%;
+    }
+}
+.anima-square {
+    -webkit-animation: live-callback 2s linear 1.5s 1000 normal;
+    -moz-animation: live-callback 2s linear 1.5s 1000 normal;
+    -ms-animation: live-callback 2s linear 1.5s normal;
+    -khtml-animation: live-callback 2s linear 1.5s normal;
+    -o-animation: live-callback 2s linear 1.5s normal;
+    animation: live-callback 2s linear 1.5s 1000 normal;
+}
 .clock-block {
     width: 100vw;
     height: 250px;
